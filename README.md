@@ -7,7 +7,7 @@
 ## 代码结构
 
 ```
-project5/
+Contemporary-AI-lab5/
 ├── data/			# 数据集
 │   ├── 1.jpg
 │   ├── 1.txt
@@ -17,7 +17,8 @@ project5/
 ├── train.txt
 ├── test_without_label.txt
 |
-├── lab5.ipynb		# kaggle上运行的结果
+├── lab5_resnet18.ipynb		# kaggle上运行的结果
+├── lab5_resnet50.ipynb		# kaggle上运行的结果
 ├── run_all.py		# 用于复现实验过程
 |
 ├── requirements.txt	# kaggle中生成的项目依赖
@@ -38,9 +39,7 @@ project5/
 └── predict.py				# 预测模块
 ```
 
-实验报告见`report.pdf`
-
-结果见`lab5.ipynb`
+kaggle运行结果见`lab5_resnet18.ipynb`和`lab5_resnet50.ipynb`
 
 ## 运行步骤
 1. 安装依赖库
@@ -59,7 +58,7 @@ project5/
    python predict.py
    ```
 
-由于设备因素，本次实验在kaggle上运行，本地的依赖可能会有所冲突，在kaggle上只能以ipynb的形式运行，因此将各模块定义统一写在同一个运行文件中，详细运行结果请参照lab5.ipynb中的内容，其中包含不同学习率的对比以及消融实验的对比结果。
+由于设备因素，本次实验在kaggle上运行，本地的依赖可能会有所冲突，在kaggle上只能以ipynb的形式运行，命令行参数的设置和模块封装较为麻烦，因此将各模块定义统一写在同一个运行文件中，参数在各个代码块中定义，详细运行结果请参照lab5_resnet18.ipynb和lab5_resnet50.ipynb中的内容，其中包含调参过程以及消融实验的对比结果。
 
 若要在本地复现实验过程，请运行`run_all.py`，其中运行路径已从kaggle中的路径改为相对路径，并且在kaggle的代码基础上添加了各个部分详细的注释。
 
@@ -67,4 +66,4 @@ project5/
 python run_all.py
 ```
 
-为使得代码结构清晰，已将kaggle上运行的`lab5.ipynb`封装成各个模块，参考代码结构部分。
+为使得代码结构清晰，已将kaggle上运行的`lab5.ipynb`封装成各个模块，参考代码结构部分，可以考虑使用命令行参数替换配置文件的设置，进一步优化代码。
